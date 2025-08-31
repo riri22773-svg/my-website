@@ -1,0 +1,199 @@
+/* 1. Сбрасываем стандартные отступы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Стиль для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* чтобы ничего не выходило за границы */
+}
+
+/* 3. Секция с текстом по центру */
+.main-section {
+    height: 100vh; /* на всю высоту экрана */
+    display: flex;
+    align-items: center; /* центрируем по вертикали */
+    justify-content: space-between;
+    background: linear-gradient(135deg, #7dbeff 0%, #ff7d7d 100%);
+}
+
+.Left {
+    transform: translateX(40px);
+}
+
+.Right {
+    transform: translateX(-100px);
+    scale: 150%;
+}
+
+/* 4. Текст который появляется из невидимости */
+.center-text {
+    color: white;
+    font-size: 5rem;
+    opacity: 0; /* полностью невидимый */
+    animation: fadeIn 2s forwards; /* анимация появления */
+    animation-delay: 0.5s; /* задержка перед началом */
+}
+
+.center-podtext {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    opacity: 0; /* полностью невидимый */
+    animation: fadeIn 2s forwards; /* анимация появления */
+    animation-delay: 1.5s; /* задержка перед началом */
+}
+
+.slide-main {
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* анимация появления */
+    animation-delay: 2s;
+}
+
+/* 5. Анимация появления текста */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* немного смещен вниз */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* на свое место */
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in.animate {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.game-center.animate {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.direction-center.animate {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.imges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Уменьшил отступ между карточками */
+    padding: 60px 40px;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #7dbeff 0%, #ff7d7d 100%);
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* та же ширина, что и у fade-in */
+    margin-bottom: 30px; /* отступ между рядами */
+}
+
+.image-text {
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.fade-in img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.game-section {
+    height: 100vh; /* на всю высоту экрана */
+    display: flex;
+    background: linear-gradient(135deg, #7dbeff 0%, #ff7d7d 100%);
+    flex-direction: column;
+}
+
+.Game {
+    text-align: center;
+    padding: 100px;
+    font-size: 3rem;
+    color: white;
+}
+
+.game-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.mygame {
+    color: white;
+    font-size: 5rem;
+}
+
+.link-game {
+    color: white;
+    font-size: 3rem;
+}
+
+.direction-section {
+    height: 100vh; /* на всю высоту экрана */
+    display: flex;
+    background: linear-gradient(45deg, #7dbeff 0%, #ff7d7d 100%);
+    flex-direction: column;
+}
+
+.Direction {
+    text-align: center;
+    padding: 100px;
+    font-size: 3rem;
+    color: white;
+}
+
+.direction-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.mydirection {
+    color: white;
+    font-size: 4rem;
+}
+
+.link-ricroll {
+    color: white;
+    font-size: 2rem;
+}
